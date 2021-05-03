@@ -54,8 +54,41 @@ app.post('/cadastrar', (req, res)=>{
     res.send({id, name, desc, cor, numero, preco, img})
 
 })
+app.put('/alterar', (req , res)=>{{
+    const {name, desc, cor, numero, preco, img, id} = req.body;
+    const produtos = lerArquivo()
+    const itemselecionado = produtos.findIndex(element => element.id === id)
 
+    if(itemselecionado>-1){
+        produtos[itemselecionado] = {
+            name, 
+            desc, 
+            cor, 
+            numero, 
+            preco, 
+            img, 
+            id}
+        res.send({messege: "alterado com sucesso"})
+    }
+    else{
+        res.status(404).send({messege:"Não encontardo"})
+    }
+    escreverArquivo(produtos)
+}})
 
+app.delete('/delete/:id', (req, res)=>{
+    const {id} = req.params
+    const produtos = lerArquivo()
+    const itemselecionado = produtos.findIndex(element => element.id === id)
+    if(itemselecionado>-1){
+        produtos.splice(itemselecionado,1)
+        escreverArquivo(produtos)
+       return res.send("deletado com sucesso")
+    }
+    res.status(404).send({messege: "item nã encontrado"})
+    
+
+})
 
 app.listen(porta, function(){
     console.log(`Rodando na ${porta}`)

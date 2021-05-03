@@ -1,25 +1,11 @@
 [
   {
-    "id": "15156116",
-    "name": "AirMAx",
-    "preco": 250
-  },
-  {
-    "id": "8hdmi3iej",
-    "name": "VaporMax",
+    "name": "Max",
     "desc": "Tenis da nike",
     "cor": "Preto",
-    "numero": 44,
-    "preco": 600,
-    "img": "https://images.lojanike.com.br/1024x1024/produto/tenis-nike-air-vapormax-2020-fk-masculino-CJ6740-002-1.jpg"
-  },
-  {
-    "id": "c74ja747q",
-    "name": "VaporMax2",
-    "desc": "Tenis da nike",
-    "cor": "Preto",
-    "numero": 44,
-    "preco": 600,
-    "img": "https://images.lojanike.com.br/1024x1024/produto/tenis-nike-air-vapormax-2020-fk-masculino-CJ6740-002-1.jpg"
+    "numero": 34,
+    "preco": 650,
+    "img": "https://images.lojanike.com.br/1024x1024/produto/tenis-nike-air-vapormax-2020-fk-masculino-CJ6740-002-1.jpg",
+    "id": "8hdmi3iej"
   }
 ]
